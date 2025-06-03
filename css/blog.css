@@ -77,14 +77,18 @@
 }
 
 .blog-post {
+  position: relative;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  opacity: 0;
-  transform: translateY(20px);
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .blog-post img {
@@ -92,6 +96,17 @@
   height: 180px;
   object-fit: cover;
   display: block;
+}
+
+/* The invisible overlay link */
+.post-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px; /* hides the text but keeps the link accessible */
+  z-index: 10;
 }
 
 /* Optional fade-in after renderPosts() */
@@ -160,4 +175,25 @@
 
 .search-button:hover {
   background: #555;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, #6a5acd, #836fff);
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  background: linear-gradient(45deg, #836fff, #6a5acd);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
