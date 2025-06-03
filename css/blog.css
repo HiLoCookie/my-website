@@ -5,7 +5,6 @@
   flex-wrap: wrap;
 }
 
-/* Sidebar on the right */
 .author-bio {
   flex: 0 0 300px;
   background: #fff;
@@ -17,32 +16,10 @@
   text-align: center;
 }
 
-/* Author bio image */
-.author-bio img {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.author-bio h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.author-bio p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* Blog Content */
 .blog-content {
   flex: 1 1 600px;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Search & Filter */
 .blog-controls {
   display: flex;
   flex-wrap: wrap;
@@ -59,7 +36,6 @@
   font-size: 1rem;
 }
 
-/* Filter Toggle Button */
 .filter-toggle {
   background: #333;
   color: #fff;
@@ -75,21 +51,15 @@
   background: #555;
 }
 
-/* Filter Options (show/hide) */
 .filter-options {
   display: none;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 .filter-options.show {
-  max-height: 500px; /* Enough to fit all the checkboxes */
-  opacity: 1;
+  display: flex;
 }
 
 .filter-options label {
@@ -100,7 +70,6 @@
   font-size: 0.9rem;
 }
 
-/* Blog Posts Grid */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -149,7 +118,6 @@
   color: #999;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .blog-page {
     flex-direction: column-reverse;
