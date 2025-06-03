@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Post Title One",
+      "excerpt": "A thrilling look into how morally gray characters shape a story’s heart—and why I love writing them.",
+      "date": "June 5, 2025",
+      "image": "/assets/images/post1.jpg",
+      "categories": ["fantasy", "romance"]
+    },
+    {
+      "title": "Post Title Two",
+      "excerpt": "Behind-the-scenes insights on my latest book release, from world-building to sizzling romance arcs.",
+      "date": "June 1, 2025",
+      "image": "/assets/images/post2.jpg",
+      "categories": ["romance", "writing-tips"]
+    },
+    {
+      "title": "Post Title Three",
+      "excerpt": "Exploring how cats as familiars add charm, mystery, and a dash of chaos to my stories.",
+      "date": "May 20, 2025",
+      "image": "/assets/images/post3.jpg",
+      "categories": ["author-life", "cats"]
+    }
+  ]
