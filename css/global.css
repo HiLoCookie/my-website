@@ -222,3 +222,44 @@ footer {
   }
 }
 
+.author-bio {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 3rem 2rem;  /* Increased top/bottom padding */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* Adds space between inner elements */
+  /* Add a background gradient (optional) */
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+  /* Optional border */
+  border: 1px solid #eee;
+}
+
+.author-bio img {
+  width: 120px;       /* Slightly larger profile image */
+  border-radius: 50%;
+}
+
+.author-bio h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.author-bio p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .author-bio {
+    position: static;
+    top: auto;
+  }
+}
