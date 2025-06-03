@@ -36,7 +36,12 @@ window.addEventListener('scroll', () => {
 const filterToggle = document.querySelector('.filter-toggle');
 const filterOptions = document.querySelector('.filter-options');
 
-filterToggle.addEventListener('click', () => {
-  filterOptions.style.display = filterOptions.style.display === 'flex' ? 'none' : 'flex';
-});
-
+if (filterToggle) {
+  filterToggle.addEventListener('click', () => {
+    if (filterOptions.style.display === 'flex') {
+      filterOptions.style.display = 'none';
+    } else {
+      filterOptions.style.display = 'flex';
+    }
+  });
+}
