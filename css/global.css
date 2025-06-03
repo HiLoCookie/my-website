@@ -257,6 +257,19 @@ footer {
   line-height: 1.6;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit; /* ensures the text color is inherited and not blue like a typical link */
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+}
+
 @media (max-width: 900px) {
   .author-bio {
     position: static;
