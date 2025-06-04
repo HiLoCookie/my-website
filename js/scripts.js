@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scroll with offset for CTA button
+  const ctaButton = document.querySelector('.cta-button');
+  const booksSection = document.querySelector('#books');
+  const headerOffset = 80; // Adjust this if your header height is different
+
+  if (ctaButton && booksSection) {
+    ctaButton.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default jump
+      const sectionTop = booksSection.offsetTop - headerOffset;
+      window.scrollTo({
+        top: sectionTop,
+        behavior: 'smooth'
+      });
+    });
+  }
   // Hamburger toggle
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');

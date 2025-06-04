@@ -37,22 +37,35 @@
   <button id="scrollTopBtn" title="Go to top">↑</button>
 
   <!-- HERO SECTION -->
-  <section class="hero show">
+  <section class="hero show hh">
     <div class="container">
-        <h2>Welcome to My Worlds</h2>
-        <p>Fantasy and romance where cunning heroines, morally gray heroes, and a touch of feline magic come together for unforgettable journeys.</p>  
+      <div class="hero-animated">
+        <!-- Here’s where we’ll put an SVG quill or cat animation -->
+        <img src="/assets/icons/cat.gif" alt="Animated Cats" class="hero-animation">
+      </div>
+      <div class="hero-content">
+        <h1>Nova Storm</h1>
+        <p>Where fantasy, romance, and sci-fi blend in worlds of unforgettable characters and heart-racing adventures.</p>
+        <a href="#books" class="cta-button">Browse My Books</a>
+      </div> 
     </div>
   </section>
   <section class="about-me">
     <div class="container">
+      <!--<img src="/assets/icons/author_pfp.jpg" alt="Nova Storm">-->
       <h2>Meet Nova Storm</h2>
       <p>Hey there! I’m Nova—an author who loves crafting stories that blend romance, adventure, and the shadows in between. My heroines are sharp-witted and resourceful; my heroes walk the tightrope between darkness and light. I believe every story needs a bit of magic—and maybe a cat or two. Dive into my worlds, and let’s explore the gray areas of love, loyalty, and destiny together.</p>
       <p>Fun fact: I have a cat who thinks she’s my editor—and let’s be honest, she probably is. She’s my purring partner-in-crime, especially when I’m plotting those morally gray twists. 🐾</p>
     </div>
+    <div class="about-quill">
+      <!-- Here’s where we’ll put an SVG quill or cat animation -->
+      <img src="/assets/icons/quill.gif" alt="Animated Quill" class="hero-animation">
+    </div>
   </section>
+  
 
   <!-- BOOKS SECTION -->
-  <section class="books">
+  <section id="books" class="books">
     <div class="container">
       <h2>Featured Books</h2>
       <div class="book-grid">
@@ -94,44 +107,53 @@
   </section>
 
   <!-- NEWSLETTER SECTION -->
-  <section class="newsletter">
-    <div class="container">
+  <!-- Newsletter Section -->
+<section class="newsletter">
+  <div class="container">
+
+    <div class="newsletter-container">
       <h2>Stay Connected</h2>
       <p>Get exclusive sneak peeks, behind-the-scenes magic, and first dibs on new releases. Sign up and let’s journey beyond the page together.</p>
-      <form>
-        <div class="form-group">
-          <label for="newsletter-email">Your Email Address</label>
-          <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required />
-        </div>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div class="support">
-        <a href="#">Support me on Ko-fi</a> | <a href="#">Patreon</a>
-      </div>
+      <iframe 
+        width="540" 
+        height="305" 
+        src="https://sibforms.com/serve/MUIFAGl5ohs4dgjaAvAi9tt8xTrAbs_PZtLwl16dAm5Tnfe7gRwWjY2FdlaG6Bb-bZHbHtHeKog9Z-SFY0zxY2wxYQb0VxKTHipjKLUMip5md2_8yKO5B8ZL5SRo64GK37eNURYOf-slE2PME_5iGJg004Fo43QWEPr1w7uiR-kqhc_0SuVTzF8dEStHXczbMW05MDVNtiZu3dJC" 
+        frameborder="0">
+      </iframe>
     </div>
-  </section>
+    <div class="support-links">
+      <a href="#">Support me on Ko-fi</a> | <a href="#">Patreon</a>
+    </div>
+  </div>
+</section>
 
   <!-- CONTACT SECTION -->
   <section class="contact">
     <div class="container">
       <h2>Contact Me</h2>
-      <form>
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-        </div>
-        <div class="captcha">
-          <button type="submit">Send</button>
-        </div>
-      </form>
+        <!--<form action="https://formspree.io/f/xgvyvvwa" method="POST" class="contact-form">-->
+          <form action="https://formsubmit.co/storm.nova.author@gmail.com" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_autoresponse" value="Your message was successfully delivered.">
+            <input type="hidden" name="_template" value="box">
+          
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+          
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required placeholder="Your email address">
+            </div>
+          
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+            </div>
+          
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
     </div>
   </section>
 
