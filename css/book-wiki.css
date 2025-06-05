@@ -57,20 +57,28 @@
     color: #444;
   }
   
+  .buy-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
   .btn-buy {
-    display: inline-block;
     background: linear-gradient(to right, #836fff, #6a5acd);
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
+    white-space: nowrap;
   }
   
   .btn-buy:hover {
     background: linear-gradient(to right, #6a5acd, #836fff);
   }
+  
 
   @media (max-width: 768px) {
     .book-details .container {
@@ -84,6 +92,11 @@
   
     .book-cover img {
       max-height: 60vh;
+    }
+
+    .buy-buttons {
+      flex-direction: column;
+      align-items: center;
     }
   }
   

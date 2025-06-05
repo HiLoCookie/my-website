@@ -1,0 +1,138 @@
+/* Shop Section */
+.shop {
+    padding: 3rem 1rem;
+    background: #f9f9f9;
+  }
+  
+  .shop h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #5e4b8b;
+  }
+  
+  .book-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Book Card */
+  .book-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    padding: 1rem;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Book Cover */
+  .book-cover {
+    flex: 0 0 auto;
+    width: 200px;  /* larger than before */
+    height: auto;
+    margin-right: 2rem;
+  }
+  
+  .book-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  /* Book Info */
+  .book-info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .book-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .book-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .buy-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .buy-links .btn {
+    background: linear-gradient(to right, #836fff, #6a5acd);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .buy-links .btn:hover {
+    background: linear-gradient(to right, #6a5acd, #836fff);
+  }
+  
+/* Highlight Coming Soon badge */
+.coming-soon-badge {
+    display: inline-block;
+    background: linear-gradient(to right, #ff6f91, #ff9671);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Preorder button */
+  .preorder-btn {
+    background: linear-gradient(to right, #ff6f91, #ff9671);
+  }
+  
+  .preorder-btn:hover {
+    background: linear-gradient(to right, #ff9671, #ff6f91);
+  }
+  
+  /* Differentiate Coming Soon cards (optional) */
+  .book-card.coming-soon {
+    border: 2px dashed #ff6f91;
+  }
+  
+
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .book-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .book-cover {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      width: 60%;  /* Adjust for mobile */
+    }
+  
+    .book-info {
+      text-align: center;
+    }
+  }
+  
