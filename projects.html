@@ -32,13 +32,6 @@
       </div>
     </nav>
   </header>
-
-    <!-- SEARCH SECTION -->
-    <section class="project-search">
-        <div class="container">
-          <input type="text" id="project-search-input" placeholder="Search projects...">
-        </div>
-      </section>
     
       <!-- CHOOSE YOUR OWN ADVENTURE GAME -->
       <section class="adventure-game">
@@ -58,6 +51,13 @@
             <!-- Game Interface -->
             <div id="game-interface" style="display: none;">
               <div id="game-text">Your adventure will appear here...</div>
+              <div id="game-scores">
+                <p><strong>Trust:</strong> <span id="trust-score">0</span> | <strong>Betrayal:</strong> <span id="betrayal-score">0</span></p>
+                <div class="progress-bars">
+                  <div class="progress trust" id="trust-bar"></div>
+                  <div class="progress betrayal" id="betrayal-bar"></div>
+                </div>
+              </div>
               <div id="game-choices"></div>
             </div>
           </div>
@@ -126,7 +126,7 @@
   </footer>
   <script src="/js/scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     (function(){
       emailjs.init("osh1ktewC0BjK33Oo");
