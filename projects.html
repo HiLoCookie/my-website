@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Storm | Projects</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="/index.html" class="logo">
+        <img src="/assets/images/logo.png" alt="Nova Storm Logo" />
+        <h1>Nova Storm</h1>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+    <!-- SEARCH SECTION -->
+    <section class="project-search">
+        <div class="container">
+          <input type="text" id="project-search-input" placeholder="Search projects...">
+        </div>
+      </section>
+    
+      <!-- CHOOSE YOUR OWN ADVENTURE GAME -->
+      <section class="adventure-game">
+        <div class="container">
+          <h2>Choose Your Own Adventure</h2>
+          <div id="game-container">
+            <!-- Email Collector -->
+            <div id="email-collector">
+              <p>Enter your email to play and receive rewards:</p>
+              <input type="email" id="user-email" placeholder="Your email address" required>
+              <button id="submit-email" class="cta-button">Submit Email</button>
+            </div>
+      
+            <!-- Start Button -->
+            <button id="start-button" class="cta-button" style="display: none;">Start Adventure</button>
+      
+            <!-- Game Interface -->
+            <div id="game-interface" style="display: none;">
+              <div id="game-text">Your adventure will appear here...</div>
+              <div id="game-choices"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- BOOK GRID SECTION -->
+      <section class="project-books">
+        <div class="container">
+          <h2>My Books</h2>
+          <div class="book-grid">
+            <!-- Example Book -->
+            <div class="book-card">
+              <a href="/templates/project-template.html">
+                <img src="/assets/images/book1.png" alt="The Mercy That Follows">
+                <div class="book-overlay">
+                  <h3>The Mercy That Follows</h3>
+                  <p>A thrilling tale of forbidden magic and dangerous love.</p>
+                </div>
+              </a>
+            </div>
+            <!-- Repeat .book-card for each book -->
+            <div class="book-card">
+              <a href="book2-wiki.html">
+                <img src="/assets/images/book1.png" alt="Raven">
+                <div class="book-overlay">
+                  <h3>Raven</h3>
+                  <p>A thrilling tale of unexpected love and cunning schemes.</p>
+                </div>
+              </a>
+            </div>
+            <div class="book-card">
+              <a href="book3-wiki.html">
+                <img src="/assets/images/book1.png" alt="Hollow Song">
+                <div class="book-overlay">
+                  <h3>Hollow Song</h3>
+                  <p>When shadows speak, only the brave dare to listen.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="shop.html">Shop</a>
+        <a href="projects.html">Projects</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+        <a href="#" aria-label="Amazon"><i class="fab fa-amazon"></i></a>
+      </div>
+      <div class="footer-brand">
+        <p>&copy; 2025 Nova Storm. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/game.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Win/Lose Overlay -->
+   <div id="overlay" class="overlay" style="display: none;">
+    <div id="overlay-content"></div>
+  </div>
+</body>
+</html>

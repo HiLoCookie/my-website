@@ -132,24 +132,21 @@
   margin-bottom: 1rem;
 }
 
+.about-quill {
+  width: 8%;
+  max-width: 25vw;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* keeps text aligned left */
+}
   
- 
-  
-  .about-quill {
-    width: 8%;
-    max-width: 25vw;
-    margin-top: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center; /* keeps text aligned left */
-  }
-  
-  .hero-animation {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
+.hero-animation {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
   
   /* Responsive */
   @media (max-width: 600px) {
@@ -278,7 +275,7 @@
 
 .newsletter-container iframe {
   width: 100%;
-  height: 300px;
+  height: 320px;
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -305,7 +302,7 @@
  /* CONTACT SECTION */
 .contact {
   background: #f0f0f0;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   border-radius: 10px;
 }
 

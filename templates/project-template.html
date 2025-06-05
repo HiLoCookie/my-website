@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Storm | Projects</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/book-wiki.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="/index.html" class="logo">
+        <img src="/assets/images/logo.png" alt="Nova Storm Logo" />
+        <h1>Nova Storm</h1>
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+<!-- BOOK DETAILS -->
+<section class="book-details">
+    <div class="container">
+      <div class="book-cover">
+        <img src="/assets/images/book1.png" alt="The Mercy That Follows">
+      </div>
+      <div class="book-info">
+        <h1>The Mercy That Follows</h1>
+        <p><strong>Author:</strong> Nova Storm</p>
+        <p class="book-annotation">
+            <p>When the Veil between worlds tears open, Aeryn—a streetwise survivor with a stolen heart—finds herself bound to Kaden, a brooding exiled prince whose touch ignites a power she can’t control. Hunted by the dark court that seeks to claim her gift, Aeryn must navigate treacherous alliances, forbidden magic, and a passion that threatens to consume them both.</p>
+            <p>In a world where trust is a rare currency and loyalty is bought in blood, Aeryn and Kaden must decide what they’re willing to sacrifice—each other, or the destiny that might save them both.</p>
+            <p><strong>A sweeping fantasy romance where secrets unravel and hearts collide, perfect for fans of Sarah J. Maas and Leigh Bardugo.</strong></p>
+        </p>
+        <a href="https://amazon.com" target="_blank" class="btn-buy">Buy on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTERS LINEUP -->
+  <section class="character-lineup">
+    <div class="container">
+      <h2>Characters</h2>
+      <div class="character-grid">
+        <!-- Repeat .character-card for each character -->
+        <div class="character-card">
+          <img src="/assets/images/char1.webp" alt="Character Name">
+          <div class="character-bubble">
+            <p><strong>Name:</strong> Aria</p>
+            <p><strong>Age:</strong> 27</p>
+            <p><strong>Race:</strong> Elf</p>
+            <p><em>"Sometimes the shadows are our only allies."</em></p>
+            <p><strong>Affiliation:</strong> Night Watchers</p>
+          </div>
+        </div>
+        <!-- Add more characters here -->
+        <div class="character-card">
+            <img src="/assets/images/char1.webp" alt="Character Name">
+            <div class="character-bubble">
+              <p><strong>Name:</strong> Aria</p>
+              <p><strong>Age:</strong> 27</p>
+              <p><strong>Race:</strong> Elf</p>
+              <p><em>"Sometimes the shadows are our only allies."</em></p>
+              <p><strong>Affiliation:</strong> Night Watchers</p>
+            </div>
+        </div>
+        <div class="character-card">
+            <img src="/assets/images/char1.webp" alt="Character Name">
+            <div class="character-bubble">
+              <p><strong>Name:</strong> Aria</p>
+              <p><strong>Age:</strong> 27</p>
+              <p><strong>Race:</strong> Elf</p>
+              <p><em>"Sometimes the shadows are our only allies."</em></p>
+              <p><strong>Affiliation:</strong> Night Watchers</p>
+            </div>
+        </div>
+        <div class="character-card">
+            <img src="/assets/images/char1.webp" alt="Character Name">
+            <div class="character-bubble">
+              <p><strong>Name:</strong> Aria</p>
+              <p><strong>Age:</strong> 27</p>
+              <p><strong>Race:</strong> Elf</p>
+              <p><em>"Sometimes the shadows are our only allies."</em></p>
+              <p><strong>Affiliation:</strong> Night Watchers</p>
+            </div>
+        </div>
+        <div class="character-card">
+            <img src="/assets/images/char1.webp" alt="Character Name">
+            <div class="character-bubble">
+              <p><strong>Name:</strong> Aria</p>
+              <p><strong>Age:</strong> 27</p>
+              <p><strong>Race:</strong> Elf</p>
+              <p><em>"Sometimes the shadows are our only allies."</em></p>
+              <p><strong>Affiliation:</strong> Night Watchers</p>
+            </div>
+        </div>
+          
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD MAP -->
+  <section class="world-map">
+    <div class="container">
+      <h2>Explore the World</h2>
+      <div class="map-container">
+        <img src="/assets/images/map.jpg" alt="World Map" id="world-map">
+        <!-- Example landmark -->
+        <div class="map-marker" style="top:20%; left:30%;" data-name="Castle Black" data-info="Castle Black is home to the Night Watchers.">
+        </div>
+        <!-- Repeat for each landmark -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALS -->
+  <div id="character-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="character-profile"></div>
+    </div>
+  </div>
+
+  <div id="location-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="location-name"></h3>
+      <p id="location-info"></p>
+    </div>
+  </div>
+
+  <script src="book-wiki.js"></script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-content">
+    <div class="footer-nav">
+        <a href="/index.html">Home</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/projects.html">Projects</a>
+    </div>
+    <div class="footer-socials">
+      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+      <a href="#" aria-label="Amazon"><i class="fab fa-amazon"></i></a>
+    </div>
+    <div class="footer-brand">
+      <p>&copy; 2025 Nova Storm. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/book-wiki.js"></script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>

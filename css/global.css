@@ -197,13 +197,13 @@ footer {
 }
 
 .footer-socials a {
-  color: #ccc;
+  color: #836fff;
   font-size: 1.3rem;
   transition: color 0.3s, transform 0.3s;
 }
 
 .footer-socials a:hover {
-  color: #fff;
+  color: #6a5acd;
   transform: translateY(-3px);
 }
 
