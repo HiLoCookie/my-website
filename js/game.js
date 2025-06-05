@@ -244,10 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==================================
     function sendRewardEmail() {
       const email = sessionStorage.getItem("currentEmail");
-      const promoCode = "NOVA123"; // This would typically be dynamic
-  
-      // Send email via EmailJS
-      emailjs.send("your_service_id", "your_template_id", {
+      const promoCode = "NOVA123";
+    
+      if (!email) {
+        console.error("No email found. Cannot send email.");
+        return;
+      }
+    
+      console.log("Sending email to:", email);
+    
+      emailjs.send("service_420kmfu", "RewardCodeTemplateNSA176", {
         to_email: email,
         promo_code: promoCode
       })
@@ -255,8 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Email sent successfully!", response);
       })
       .catch(error => {
-        console.error("Email send failed:", error);
+        console.error("Failed to send email:", error);
       });
     }
-  });
-  
+    
+})
