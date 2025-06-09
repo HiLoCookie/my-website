@@ -1,0 +1,40 @@
+[
+    {
+      "id": "aria",
+      "name": "Aria",
+      "age": "365",
+      "race": "Elf",
+      "quote": "Sometimes the shadows are our only allies.",
+      "affiliation": "Night Watchers",
+      "bio": "Aria is a cunning Elf with a shadowy past, skilled in stealth and subterfuge. She walks the line between darkness and light, ever seeking her true purpose.",
+      "relationships": "Seraphina - Friendly, Marcus - Enemies",
+      "abilities": "Archery, Old tongue, Healing Magic",
+        "weapon": "Ashwood Bow"
+    },
+    {
+      "id": "seraphina",
+      "name": "Seraphina Al'asher Karkan",
+      "age": "19 872",
+      "race": "Demigod",
+      "quote": "Sometimes the shadows are our only allies.",
+      "affiliation": "Pantheon of Orach",
+      "bio": "Seraphina is a demigod with ancient power, balancing light and shadow in her quest to reclaim her legacy.",
+      "relationships": "Aria - Friendly, Marcus - Lovers",
+      "abilities": "Immortality, Magic, Shapeshifting",
+        "weapon": "Chain of Sirens"
+
+    },
+    {
+        "id": "marcus",
+        "name": "Marcus",
+        "age": "27",
+        "race": "Human",
+        "quote": "Sometimes the shadows are our only allies.",
+        "affiliation": "Heir to the Throne of Arasbet",
+        "bio": "Marcus is the last heir to the throne, torn between duty and his heart's desire. His loyalty is both his greatest weapon and his deepest weakness.",
+        "relationships": "Seraphina - Lover, Aria - Enemies",
+        "abilities": "Swordsmanship, Diplomacy, Leadership",
+        "weapon": "Silver Sword of the Arasbet Kings"
+    }
+]
+  

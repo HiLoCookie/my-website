@@ -1,60 +1,99 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // CHARACTER MODAL
-    const characterCards = document.querySelectorAll('.character-card');
-    const characterModal = document.getElementById('character-modal');
-    const characterProfile = document.getElementById('character-profile');
-    const modalCloseBtns = document.querySelectorAll('.modal .close');
-  
-    characterCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const name = card.querySelector('.character-bubble p:nth-child(1)').innerText.replace('Name: ', '');
-        const age = card.querySelector('.character-bubble p:nth-child(2)').innerText.replace('Age: ', '');
-        const race = card.querySelector('.character-bubble p:nth-child(3)').innerText.replace('Race: ', '');
-        const quote = card.querySelector('.character-bubble p:nth-child(4)').innerText;
-        const affiliation = card.querySelector('.character-bubble p:nth-child(5)').innerText.replace('Affiliation: ', '');
-  
+  const characterCards = document.querySelectorAll('.character-card');
+  const characterModal = document.getElementById('character-modal');
+  const characterProfile = document.getElementById('character-profile');
+  const modalCloseBtns = document.querySelectorAll('.modal .close');
+
+  let charactersData = [];
+
+  // Load characters from JSON
+  fetch('/data/projects/character-template.json')
+    .then(response => response.json())
+    .then(data => {
+      charactersData = data;
+    })
+    .catch(error => {
+      console.error("Failed to load character data:", error);
+    });
+
+  // Add click event to each character card
+  characterCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const characterId = card.getAttribute('data-id');
+      const character = charactersData.find(c => c.id === characterId);
+
+      if (character) {
+        // Split relationships into a list
+        const relationshipsList = character.relationships
+          ? character.relationships.split(',').map(rel => rel.trim())
+          : [];
+
+        let relationshipsHTML = '';
+        if (relationshipsList.length > 0) {
+          relationshipsHTML = `
+            <p><strong>Relationships:</strong></p>
+            <ul>
+              ${relationshipsList.map(rel => `<li>${rel}</li>`).join('')}
+            </ul>
+          `;
+        }
+
+        // Split abilities
+        const abilitiesList = character.abilities
+          ? character.abilities.split(',').map(ability => ability.trim())
+          : [];
+
+        let abilitiesHTML = '';
+        if (abilitiesList.length > 0) {
+          abilitiesHTML = `
+            <p><strong>Abilities:</strong></p>
+            <ul>
+              ${abilitiesList.map(ability => `<li>${ability}</li>`).join('')}
+            </ul>
+          `;
+        }
+
+        let weaponHTML = '';
+        if (character.weapon) {
+          weaponHTML = `
+            <p><strong>Weapon:</strong> ${character.weapon}</p>
+          `;
+        }
+
         characterProfile.innerHTML = `
-          <h3>${name}</h3>
-          <p><strong>Age:</strong> ${age}</p>
-          <p><strong>Race:</strong> ${race}</p>
-          <p><em>${quote}</em></p>
-          <p><strong>Affiliation:</strong> ${affiliation}</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is a placeholder for a longer character bio. You can replace this with real data later!</p>
+          <h3>${character.name}</h3>
+          <p><strong>Age:</strong> ${character.age}</p>
+          <p><strong>Race:</strong> ${character.race}</p>
+          <p><strong>Affiliation:</strong> ${character.affiliation}</p>
+          ${weaponHTML}
+          ${abilitiesHTML}
+          <p><strong>Quote: </strong><em>"${character.quote}"</em></p>
+          <p>${character.bio}</p>
+          ${relationshipsHTML}
         `;
-  
         characterModal.style.display = 'flex';
-      });
-    });
-  
-    // LOCATION MODAL
-    const mapMarkers = document.querySelectorAll('.map-marker');
-    const locationModal = document.getElementById('location-modal');
-    const locationName = document.getElementById('location-name');
-    const locationInfo = document.getElementById('location-info');
-  
-    mapMarkers.forEach(marker => {
-      marker.addEventListener('click', () => {
-        const name = marker.getAttribute('data-name');
-        const info = marker.getAttribute('data-info');
-  
-        locationName.textContent = name;
-        locationInfo.textContent = info;
-  
-        locationModal.style.display = 'flex';
-      });
-    });
-  
-    // Close modals
-    modalCloseBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.closest('.modal').style.display = 'none';
-      });
-    });
-  
-    // Close modals when clicking outside modal content
-    window.addEventListener('click', (e) => {
-      if (e.target.classList.contains('modal')) {
-        e.target.style.display = 'none';
+      } else {
+        characterProfile.innerHTML = `<p>Character data not found.</p>`;
+        characterModal.style.display = 'flex';
       }
     });
   });
+
+  // Modal close buttons
+  modalCloseBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.modal').style.display = 'none';
+    });
+  });
+
+  // Click outside modal to close
+  window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+      e.target.style.display = 'none';
+    }
+  });
+});
+
+
+
+// Map

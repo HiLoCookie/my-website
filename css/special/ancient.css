@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+  background: url('/assets/images/parchment-texture.avif') repeat;
+  color: #3e2c23; /* deep brown for text */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #d4af37; /* gold accent */
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+/* Book Details */
+.book-details {
+  background: rgba(255, 250, 240, 0.9);
+  border: 2px solid #a8876f;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Character Lineup */
+.character-lineup {
+  background: rgba(255, 250, 240, 0.9);
+  border: 2px solid #a8876f;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+.character-card {
+  position: relative;
+  width: 150px;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.character-card img {
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+}
+
+/* World Map */
+.world-map {
+  background: rgba(255, 250, 240, 0.9);
+  border: 2px solid #a8876f;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+/* Modal Styling */
+.modal-content {
+    background: #f5f0e3;
+    border: 3px solid #a8876f;
+    border-radius: 10px;
+    padding: 2.5rem;
+    max-width: 800px;
+    width: 95%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease forwards;
+    
+    /* Remove the scroll bar unless needed */
+    max-height: none;
+    overflow-y: visible;
+  }
+
+.modal-content h3 {
+    font-size: 2rem;          /* already at 2rem, can be increased slightly if desired */
+    margin-bottom: 1rem;
+    color: #5e4b8b;
+    font-family: 'Cinzel', serif;
+  }
+
+.modal-content p {
+    font-size: 1.5rem;        /* increased from 1rem */
+    line-height: 1.7;         /* improved line height for readability */
+    margin-bottom: 1rem;      /* consistent spacing between paragraphs */
+    color: #333333;
+  }
+
+  .modal-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;  /* Matches paragraph size */
+    line-height: 1.7;
+    color: #444;
+  }
+  
+  .modal-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .modal-content {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+  }
+
+/* Buttons */
+.btn {
+  background: linear-gradient(to right, #a8876f, #d4af37);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #d4af37, #a8876f);
+}
